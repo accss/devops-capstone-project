@@ -102,6 +102,13 @@ class TestAccountService(TestCase):
         }
         for key, value in headers.items():
             self.assertEqual(response.headers.get(key), value)
+            
+    def test_cors_security(self):
+        """Deve retornar um cabeçalho CORS"""
+        response = self.client.get('/', environ_overrides=HTTPS_ENVIRON)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        # Verifique se o cabeçalho CORS está presente
+        self.assertEqual(response.headers.get('Access-Control-Allow-Origin'), '*')
 
     def test_create_account(self):
         """It should Create a new Account"""
