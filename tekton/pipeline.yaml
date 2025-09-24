@@ -36,3 +36,11 @@ spec:
         value: $(params.branch)
       runAfter:
         - init
+
+    - name: lint
+      workspaces:
+        - name: source
+          workspace: pipeline-workspace
+      taskRef:
+        name: flake8
+      
