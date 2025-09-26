@@ -1,12 +1,3 @@
----
-name: User Story
-about: Template for user stories
-title: ''
-labels: ''
-assignees: ''
-
----
-
 **As a** [role]  
  **I need** [function]  
  **So that** [benefit]  
@@ -21,3 +12,13 @@ assignees: ''
  When [certain action is taken]
  Then [the outcome of action is observed]
  ```
+
+
+
+
+
+
+
+
+
+
